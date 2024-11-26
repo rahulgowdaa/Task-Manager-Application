@@ -60,7 +60,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    // Use dynamic import with await
+    (await import("tailwindcss-animate")).default,
+  ],
 };
 
 export default config;
